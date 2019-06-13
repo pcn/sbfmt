@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "http://github.com/pcn/sbfmt/sbfmt/formats/v1_module.json",
+    "title": "Modules we want to load",
+    "description": "The required bits for a module to be loaded and recognized",
+    "type": "object",
+    "properties": {
+        "version": {
+            "description": "The version of this module format",
+            "type": "integer"
+        },
+        "name": {
+            "description": "The unique name of this module",
+            "type": "string"
+        },
+        "invocation": {
+            "description": "The thing that will get invoked",
+            "type": "string"
+        },
+        "args": {
+            "description": "The arguments that can be passed in to this module",
+            "type": "object",
+            "properties": {
+            }
+        }
+    },
+    "required": ["version", "request", "response", "source"]
+}

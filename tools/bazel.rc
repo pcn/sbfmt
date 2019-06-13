@@ -1,0 +1,2 @@
+build --workspace_status_command=./tools/mkstamp.bash
+test --test_output=all

@@ -1,0 +1,13 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#"
+    "$id": "http://github.com/pcn/sbfmt/formats/v1_message.json"
+    "title": "Ping and pong messages",
+    "description": "A ping and pong message",
+    "type": "object",
+    "properties": {
+        "version": {
+            "description": ""
+        }
+    }
+    
+}

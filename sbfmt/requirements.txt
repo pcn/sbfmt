@@ -1,0 +1,4 @@
+jsonschema
+
+# Test requirements
+pytest

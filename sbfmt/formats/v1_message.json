@@ -1,0 +1,40 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "http://github.com/pcn/sbfmt/sbfmt/formats/v1_message.json",
+    "title": "The wrapping message for commands that may be sent",
+    "description": "A json message that can send other messages",
+    "type": "object",
+    "properties": {
+        "version": {
+            "description": "The version of this message",
+            "type": "integer"
+        },
+        "request": {
+            "description": "The message, as interpreted by the bot, to be executed",
+            "type": "object"
+        },
+        "response": {
+            "description": "The response, to be interpreted by the bot",
+            "type": "object"
+        },
+        "source": {
+            "description": "The user and the channel the message came from",
+            "type": "object",
+            "properties": {
+                "user": {
+                    "description": "The name or user or whatever slack provides for the user who requested this message",
+                    "type": "string"
+                },
+                "channel": {
+                    "description": "The channel the message came from"
+              },
+                "return_to_user": {
+                    "description": "Whether to return directly to the requesting user instead of the channel",
+                    "type": "boolean"
+                }
+            },
+            "required": ["user", "channel", "return_to_user"]
+        }
+    },
+    "required": ["version", "request", "response", "source"]
+}
